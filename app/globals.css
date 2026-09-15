@@ -742,6 +742,9 @@ summary:focus-visible {
 .market > .photo .photo-frame {
   height: 500px;
 }
+.market > .photo img {
+  object-position: center 38%;
+}
 .shop-list {
   display: flex;
   justify-content: space-between;
@@ -1452,7 +1455,8 @@ summary::-webkit-details-marker {
     margin: 24px 0;
   }
   .market > .photo .photo-frame {
-    height: 330px;
+    height: auto;
+    aspect-ratio: 3 / 2;
   }
   .market > .photo img {
     object-position: center;
