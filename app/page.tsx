@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   ArrowUpRight,
   MoveUpRight,
   MessageCircle,
@@ -7,6 +6,7 @@ import {
   Plus,
 } from 'lucide-react';
 import { Header, Motion, PlaceViews } from './ui';
+import RouteTearReveal from '@/components/ui/route-tear-reveal';
 import { WHATSAPP } from './project';
 
 function Photo({
@@ -77,50 +77,7 @@ export default function Home() {
       <Header />
       <Motion />
       <main id="contenido">
-        <section className="cover" id="inicio" aria-labelledby="cover-title">
-          <div className="cover-image" data-parallax>
-            <img
-              src="/images/editorial-ruta.webp"
-              alt="Escena editorial generada con IA: dos motoviajeros contemplan un paisaje serrano junto a la ruta"
-              width="1536"
-              height="1024"
-              fetchPriority="high"
-            />
-          </div>
-          <div className="cover-shade" />
-          <div className="cover-top">
-            <span>VILLA CIUDAD DE AMÉRICA, CÓRDOBA</span>
-            <span>ROAD · MACHINE · SHELTER · COMMUNITY</span>
-          </div>
-          <div className="cover-title">
-            <p className="kicker">AMERICA MOTOR COMPANY</p>
-            <h1 id="cover-title">
-              <span>CULTURA</span>
-              <span>
-                DE RUTA<span className="title-dot">.</span>
-              </span>
-            </h1>
-          </div>
-          <div className="cover-bottom">
-            <p>
-              Un lugar para bajar de la moto.
-              <br />Y sentir que llegaste.
-            </p>
-            <a
-              className="round-link"
-              href="#espiritu"
-              aria-label="Entrá en AMC"
-            >
-              <span>ENTRÁ EN AMC</span>
-              <span className="circle">
-                <ArrowDown aria-hidden="true" />
-              </span>
-            </a>
-          </div>
-          <p className="cover-credit">
-            CULTURA DE RUTA · IMAGEN EDITORIAL GENERADA CON IA
-          </p>
-        </section>
+        <RouteTearReveal />
         <nav className="experience-nav" aria-label="Descubrí AMC">
           <a href="#refugios">
             QUEDARSE <ArrowUpRight aria-hidden="true" />

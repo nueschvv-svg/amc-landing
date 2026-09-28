@@ -360,6 +360,103 @@ summary:focus-visible {
   letter-spacing: 1px;
   color: #e2e1da;
 }
+/* --- portada rasgada --- */
+.tear {
+  position: relative;
+  width: 100%;
+  background: var(--paper);
+  overflow: clip;
+  height: calc(clamp(630px, 100svh - 138px, 950px) + 150svh);
+}
+.tear-stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: clamp(630px, 100svh - 138px, 950px);
+  overflow: hidden;
+}
+.tear-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: block;
+}
+.tear-top {
+  position: absolute;
+  left: 3.2%;
+  right: 3.2%;
+  top: 27px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  color: #6d6c62;
+  pointer-events: none;
+}
+.tear-bottom {
+  position: absolute;
+  left: 6.25%;
+  right: 6.25%;
+  bottom: 48px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  color: var(--ink);
+  transition: opacity 0.3s;
+}
+.tear-bottom p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.tear-bottom .circle {
+  border-color: #14151233;
+}
+.tear-bottom .round-link:hover .circle {
+  background: var(--ink);
+  color: var(--paper);
+}
+.tear-hint {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 3.2px;
+  color: #6d6c62;
+  pointer-events: none;
+}
+.tear-hint span {
+  display: block;
+  width: 1px;
+  height: 22px;
+  background: #6d6c62;
+}
+@media (max-width: 700px) {
+  .tear {
+    height: calc(clamp(520px, 100svh - 120px, 900px) + 130svh);
+  }
+  .tear-stage {
+    height: clamp(520px, 100svh - 120px, 900px);
+  }
+  .tear-bottom {
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+    bottom: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tear {
+    height: clamp(630px, 100svh - 138px, 950px);
+  }
+}
 .experience-nav {
   background: var(--ink);
   color: var(--paper);
