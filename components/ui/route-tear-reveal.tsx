@@ -454,7 +454,7 @@ export default function RouteTearReveal({ progress, className = '' }: RouteTearR
         textLength={640}
         lengthAdjust="spacingAndGlyphs"
         fill={INK}
-        style={{ fontFamily: 'var(--title)', fontSize: 186, fontWeight: 600, letterSpacing: '-0.045em' }}
+        style={{ fontFamily: "var(--title, 'Oswald Variable'), 'Oswald Variable', 'Arial Narrow', sans-serif", fontSize: 186, fontWeight: 600, letterSpacing: '-0.045em' }}
       >
         CULTURA
       </text>
@@ -465,7 +465,7 @@ export default function RouteTearReveal({ progress, className = '' }: RouteTearR
         textLength={620}
         lengthAdjust="spacingAndGlyphs"
         fill={INK}
-        style={{ fontFamily: 'var(--title)', fontSize: 186, fontWeight: 600, letterSpacing: '-0.045em' }}
+        style={{ fontFamily: "var(--title, 'Oswald Variable'), 'Oswald Variable', 'Arial Narrow', sans-serif", fontSize: 186, fontWeight: 600, letterSpacing: '-0.045em' }}
       >
         DE RUTA
       </text>
