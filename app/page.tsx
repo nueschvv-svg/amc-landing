@@ -466,7 +466,7 @@ export default function Home() {
               poliuretano. Aplicaciones, espesores y estructura se definirán en
               el proyecto ejecutivo. <Ref n={10} />
             </p>
-            <Link href="https://alpanel.com.ar/ficha-tecnica/" external>
+            <Link href="https://alpanel.com.ar" external>
               Explorá el sistema Alpanel
             </Link>
             <a
