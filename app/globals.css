@@ -365,14 +365,17 @@ summary:focus-visible {
   position: relative;
   width: 100%;
   background: var(--paper);
-  overflow: clip;
-  height: calc(clamp(630px, 100svh - 138px, 950px) + 150svh);
+  /* sin overflow acá: Safari rompe el sticky si el padre recorta */
+  height: calc(clamp(560px, 100vh - 138px, 950px) + 100vh);
+  height: calc(clamp(560px, 100svh - 138px, 950px) + 100svh);
 }
 .tear-stage {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
-  height: clamp(630px, 100svh - 138px, 950px);
+  height: clamp(560px, 100vh - 138px, 950px);
+  height: clamp(560px, 100svh - 138px, 950px);
   overflow: hidden;
 }
 .tear-svg {
@@ -406,7 +409,6 @@ summary:focus-visible {
   justify-content: space-between;
   gap: 25px;
   color: var(--ink);
-  transition: opacity 0.3s;
 }
 .tear-bottom p {
   font-size: 16px;
@@ -440,21 +442,26 @@ summary:focus-visible {
 }
 @media (max-width: 700px) {
   .tear {
-    height: calc(clamp(520px, 100svh - 120px, 900px) + 130svh);
+    height: calc(clamp(480px, 100vh - 120px, 900px) + 85vh);
+    height: calc(clamp(480px, 100svh - 120px, 900px) + 85svh);
   }
   .tear-stage {
-    height: clamp(520px, 100svh - 120px, 900px);
+    height: clamp(480px, 100vh - 120px, 900px);
+    height: clamp(480px, 100svh - 120px, 900px);
   }
   .tear-bottom {
     flex-direction: column;
     align-items: start;
-    gap: 18px;
-    bottom: 40px;
+    gap: 16px;
+    bottom: 34px;
+  }
+  .tear-bottom p {
+    font-size: 15px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .tear {
-    height: clamp(630px, 100svh - 138px, 950px);
+    height: clamp(480px, 100svh - 138px, 950px);
   }
 }
 .experience-nav {

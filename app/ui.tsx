@@ -97,21 +97,6 @@ export function Motion() {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('.cover-title h1 > span', {
-        y: 36,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.1,
-        ease: 'power3.out',
-        clearProps: 'all',
-      });
-      gsap.from('.cover-bottom', {
-        opacity: 0,
-        y: 12,
-        duration: 0.7,
-        delay: 0.35,
-        clearProps: 'all',
-      });
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
         gsap.from(el, {
           y: 25,
